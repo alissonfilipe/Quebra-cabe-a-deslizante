@@ -9,21 +9,39 @@ function generateRandomMatrix(size) {
     return matrix;
 }
 
+function indiceExiste(array2d, linha, coluna) {
+    // Verifica se a linha está dentro do limite do array 2D
+    if (linha >= 0 && linha < array2d.length) {
+        // Verifica se a coluna está dentro do limite da linha específica
+        if (coluna >= 0 && coluna < array2d[linha].length) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function Mover(array, linha, coluna) {
+    // validar se o movimento é possível
+    if (indiceExiste(array, linha, coluna)) {
+
+    }
+}
+
 
 const size = 3;
 let matrix = generateRandomMatrix(size);
 console.log("Matriz Aleatória Inicial:");
 console.table(matrix)
 
-function organizar(matriz){
+function organizar(matriz) {
     let troca;
     const size = matriz.length;
-    for (let linha = 0;linha < size;linha++){
-       for (let coluna = 0;coluna < size;coluna++){
-        // substituição para o código funcional
-        
+    for (let linha = 0; linha < size; linha++) {
+        for (let coluna = 0; coluna < size; coluna++) {
+            // substituição para o código funcional
+
         }
-        
+
     }
     return matriz;
 }
