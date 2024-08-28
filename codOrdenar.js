@@ -86,12 +86,7 @@ function Mover(array, linha, coluna) {
 
 
 
-// começar do primeiro índice e ir subindo se ele for o maior
-// se não passar para o próximo
-// verificar linha mais um, linha menos 1
-// verificar coluna mais um, coluna menos 1
-// analizando o código percebi que quando um número é contrado 
-// a matriz deve ser zera e deve começar de novo apartir do índice 00
+
 function organizar(matriz) {
     //declarei variável para a troca
     const size = matriz.length;
