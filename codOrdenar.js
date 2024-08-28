@@ -19,11 +19,6 @@ function generateRandomMatrix(size) {
     return matrix;
 }
 
-
-
-
-
-
 function trocarElementos(array2D, row1, col1, row2, col2) {
     // Realiza a troca dos elementos
     let temp = array2D[row1][col1];
@@ -32,12 +27,6 @@ function trocarElementos(array2D, row1, col1, row2, col2) {
 
     return array2D;
 }
-
-
-
-
-
-
 
 function indiceExiste(array2d, linha, coluna) {
     // Verifica se a linha está dentro do limite do array 2D
@@ -50,16 +39,6 @@ function indiceExiste(array2d, linha, coluna) {
     return false;
 }
 
-function maiorIndice(array){
-
-}
-
-
-
-
-
-
-
 // os argumentos vai ser matriz, e índices de troca
 // ele vai testar todas as possibildades para mover o item
 function Mover(array, linha, coluna) {
@@ -69,7 +48,7 @@ function Mover(array, linha, coluna) {
     // vou precisar de uma cadeia de if?
 
     // direita
-    if (indiceExiste(array, linha, coluna)) { // onde eu verifico?
+    if (indiceExiste(array, linha, coluna)) { 
             array = trocarElementos(array,linha,coluna,linha+1,coluna)
     }
     //esquerda
@@ -79,25 +58,21 @@ function Mover(array, linha, coluna) {
 }
 
 
-
-
-
-
-
-
-
-
 function organizar(matriz) {
-    //declarei variável para a troca
     const size = matriz.length;
+    let menor; // declaração do menor valor
+    menor = matriz[0][0]
+    let contador = 0;
     for (let linha = 0; linha < size; linha++) {
         for (let coluna = 0; coluna < size; coluna++) {
-            // substituição para o código funcional
-            //verificação se um intem existe
-            if (indiceExiste(matriz, linha, coluna)) { // onde eu verifico?
-                
+            // primeiro laço, primeiro índice
+             
+            if (menor>=matriz[linha+1][coluna] && indiceExiste(matriz, linha+1, coluna)){
+              
             }
+           
         }
+        contador++
 
     }
     return matriz;
@@ -113,6 +88,6 @@ console.table(matrix)
 
 
 console.log("\nMatriz Ordenada:");
-//matrix = organizar(matrix)
+matrix = organizar(matrix)
 //console.table(matrix)
 
