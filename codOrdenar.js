@@ -1,6 +1,6 @@
 function generateRandomMatrix(size) {
     const matrix = [];
-    
+
     // Gerar a matriz com números aleatórios de 1 a 9
     for (let i = 0; i < size; i++) {
         matrix[i] = [];
@@ -8,14 +8,14 @@ function generateRandomMatrix(size) {
             matrix[i][j] = Math.floor(Math.random() * 9) + 1; // números aleatórios de 1 a 9
         }
     }
-    
+
     // Escolher uma posição aleatória para o zero
     const zeroRow = Math.floor(Math.random() * size);
     const zeroCol = Math.floor(Math.random() * size);
-    
+
     // Colocar o zero na posição aleatória
     matrix[zeroRow][zeroCol] = 0;
-    
+
     return matrix;
 }
 
@@ -48,31 +48,28 @@ function Mover(array, linha, coluna) {
     // vou precisar de uma cadeia de if?
 
     // direita
-    if (indiceExiste(array, linha, coluna)) { 
-            array = trocarElementos(array,linha,coluna,linha+1,coluna)
+    if (indiceExiste(array, linha, coluna)) {
+        array = trocarElementos(array, linha, coluna, linha + 1, coluna)
     }
-    //esquerda
-    // baixo
-    //cima
+
 
 }
 
 
 function organizar(matriz) {
     const size = matriz.length;
-    let menor; // declaração do menor valor
+    let menor = 0 // declaração do menor valor
     menor = matriz[0][0]
     let contador = 0;
     for (let linha = 0; linha < size; linha++) {
         for (let coluna = 0; coluna < size; coluna++) {
             // primeiro laço, primeiro índice
-             
-            if (menor>=matriz[linha+1][coluna] && indiceExiste(matriz, linha+1, coluna)){
-              
+            // encontrar o menor
+            if (matriz[linha][coluna] > 0) {
+                menor = matriz[linha][coluna];
             }
-           
         }
-        contador++
+
 
     }
     return matriz;
@@ -89,5 +86,5 @@ console.table(matrix)
 
 console.log("\nMatriz Ordenada:");
 matrix = organizar(matrix)
-//console.table(matrix)
+console.table(matrix)
 

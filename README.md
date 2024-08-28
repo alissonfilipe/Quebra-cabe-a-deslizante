@@ -68,5 +68,10 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 - se não ouver outro intem na linha passe para a próxima coluna
 - se não ouver a próxima coluna o problema foi resolvido
 
+# código para reutilizar 
+if (menor >= matriz[linha + 1][coluna] && indiceExiste(matriz, linha + 1, coluna)) {
+                console.log(contador)
+                contador++
+            }
 
 
