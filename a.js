@@ -3,7 +3,7 @@ function generateRandomMatrix(size) {
     for (let i = 0; i < size; i++) {
         matrix[i] = [];
         for (let j = 0; j < size; j++) {
-            matrix[i][j] = Math.floor(Math.random() * 9) + 1; // números aleatórios de 1 a 9
+            matrix[i][j] = Math.floor(Math.random() * 9) + 0; // números aleatórios de 1 a 9
         }
     }
     return matrix;
@@ -13,7 +13,6 @@ function generateRandomMatrix(size) {
 const size = 3;
 let matrix = generateRandomMatrix(size);
 console.log("Matriz Aleatória Inicial:");
-matrix[0][0] = 0
 console.table(matrix)
 
 function organizar(matriz){
