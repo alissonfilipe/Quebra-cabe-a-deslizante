@@ -15,5 +15,5 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 - como nesse exemplo
 <br>
 ![alt text](image-1.png)
-<br>
+
 - aqui o 4 está antes do 3 mas seguindo esse algorítimo descrito existe uma pequena chance de não ordenar
