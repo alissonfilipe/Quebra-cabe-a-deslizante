@@ -17,3 +17,13 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 ![alt text](image-1.png)
 
 - aqui o 4 está antes do 3 mas seguindo esse algorítimo descrito existe uma pequena chance de não ordenar
+
+- foi ae que eu tive uma outra idéia 
+- ordenaar primeiro linha depois coluna, toda vez que trocar começar de novo na linha ou na coluna
+- sempre procurando o maior
+
+- novamente o algorítimo não resolveu o problema
+- o erro desse algorítimo foi pior que o anterior 
+- nas fotos seguintes tem o último movimento na linha e na coluna
+![alt text](image-3.png)
+![alt text](image-2.png)
