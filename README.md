@@ -25,6 +25,34 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 ![alt text](image-10.png)<br>
 ![alt text](image-11.png)<br>
 ![alt text](image-12.png)<br>
+
+# Como Funciona a Função ordenarMatriz
+Este documento fornece uma explicação passo a passo de como a função ordenarMatriz funciona para ordenar uma matriz 2D. Esse guia pode ser usado para implementar o mesmo algoritmo em qualquer linguagem de programação.
+
+# Objetivo
+A função ordenarMatriz reorganiza os elementos de uma matriz bidimensional (2D) de modo que eles fiquem em ordem crescente, movendo cada elemento um passo por vez até que ele esteja na posição correta. A matriz é ordenada da esquerda para a direita, e de cima para baixo.
+
+# Estrutura da Função
+1. Inicialização
+- A função recebe uma matriz 2D como entrada criada aleatóriamente
+- As variáveis linhas e colunas são definidas para armazenar o número de linhas e colunas da matriz, respectivamente.
+2. Percorrendo a Matriz
+- A função usa dois laços for para iterar sobre cada posição da matriz. O primeiro laço (i) percorre as linhas e o segundo laço (j) percorre as colunas.
+- Cada posição (i, j) da matriz é tratada como o "índice de referência" atual, que é o ponto a partir do qual procuraremos o menor valor ainda não ordenado.
+3. Encontrar o Menor Valor
+- A função busca o menor valor na matriz que ainda não foi ordenado, começando a busca na posição (i, j).
+- Esse menor valor pode estar em qualquer lugar após a posição (i, j), e a função encontra sua posição, armazenada em posMenor.
+4. Mover o Menor Valor para a Coluna Correta
+- Uma vez identificado o menor valor, a função o move para a coluna da posição de referência (i, j) um passo por vez.
+- Se o menor valor estiver à direita da coluna de referência, ele é movido para a esquerda, e vice-versa.
+- Após cada movimento, a matriz é impressa para mostrar o estado atual.
+5. Mover o Menor Valor para a Linha Correta
+- Após posicionar o menor valor na coluna correta, a função o move dentro da coluna até que ele esteja na linha correta.
+- Se o menor valor estiver abaixo da linha de referência, ele é movido para cima, e vice-versa.
+- A matriz é novamente impressa após cada movimento.
+6. Repetir para Todos os Elementos
+- O processo acima é repetido para cada elemento da matriz, até que todos os elementos estejam ordenados.
+
 # minhas anotações
 
 - acho que vou ter alguns problemas como dois laços for dentro de dois laços for 
@@ -50,44 +78,3 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 - percebi que esse erro é justamente porque é limitado a questão da troca
 
 - percebi que não é possível deslizar de longe mas é possível verificar percorrendo o array
-
-
-# definindo o primeiro índice
-- vericar apartir do primeiro número e percorrer pra ver se ele é o menor
-- se sim continua verificando o array até chegar no último elemento
-- se encontrar um elemento menor a variável menor que armazena a posição é trocada para o próximo menor
-- chegou até o fim move para a última linha e última coluna
-- vai até o indice 0 da coluna e depois na linha
-- depois de achar o menor índice devemos achar o segundo menor índice
-
-# definindo o segundo índice
-- o array já foi percorrido e agora devemos ir para o segundo índice
-- nesse caso esse índice deve estar na mesma coluna do segundo menor
-- desliza o segundo menor até a coluna 1
-- depois desliza até o lugar do segundo menor `array[linha0][coluna1]`
-
-# definindo o terceiro índice
-- passa para o próximo intem e faz a busca para descobrir o menor número depois de
-`array[linha0][coluna2]`
-- tenho que levar o menor até a coluna do que seria o terceiro menor
-- depois ir deslizando na coluna até fazer a troca do índice
-
-# resumo do algorítimo 
-- gerar matriz aleatório
-- gerar um zero aleatório na matriz
-- ordenar a matriz
-- VOCÊ NÃO PODE SIMPLISMENTE TROCAR UM ÍNDICE PELO O OUTRO SEM ELE ESTAR COM UM DE DIFERENÇA
-- começa apartir do `PRIMEIRO ÍNDICE`
-- use uma variável menor para percorrer o array tentando descobrir qual é o menor
-- se o `ÌNDICE ATUAL` for o menor passa para o próximo
-- se não ache o menor percorrendo o array até o final
-- depois de achar o menor 
-- mova o menor até a mesma coluna do índice que você está usando como base
-- de ínicio é o `array[linha0][coluna0]`
-- depois deslize ele na coluna fazendo swap(trocas) até finalmente ele ser o menor
-- TODA VEZ QUE FIZER UMA TROCA IMPRIMA O ARRAY APÓS A TROCA
-- passe para o próximo item da linha
-- se não ouver outro intem na linha passe para a próxima coluna
-- se não ouver a próxima coluna o problema foi resolvido
-
-
