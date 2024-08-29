@@ -9,22 +9,22 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 - função encontrar o menor da vez que serve para quando for ordenar a matriz essa função vai buscar pelo menor índice
 - EXEMPLO
 
-- array aleatório inicial
-![alt text](image.png)
+- array aleatório inicial <br>
+![alt text](image-0.png) <br>
 
-- movimentações 
-![alt text](image-1.png)
-![alt text](image-2.png)
-![alt text](image-3.png)
-![alt text](image-4.png)
-![alt text](image-5.png)
-![alt text](image-6.png)
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
-![alt text](image-10.png)
-![alt text](image-11.png)
-![alt text](image-12.png)
+- movimentações <br>
+![alt text](image-1.png)<br>
+![alt text](image-2.png)<br>
+![alt text](image-3.png)<br>
+![alt text](image-4.png)<br>
+![alt text](image-5.png)<br>
+![alt text](image-6.png)<br>
+![alt text](image-7.png)<br>
+![alt text](image-8.png)<br>
+![alt text](image-9.png)<br>
+![alt text](image-10.png)<br>
+![alt text](image-11.png)<br>
+![alt text](image-12.png)<br>
 # minhas anotações
 
 - acho que vou ter alguns problemas como dois laços for dentro de dois laços for 
