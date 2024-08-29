@@ -51,8 +51,26 @@ function Mover(array, linha, coluna) {
     if (indiceExiste(array, linha, coluna)) {
         array = trocarElementos(array, linha, coluna, linha + 1, coluna)
     }
+    return array
 
 
+}
+
+// primeiro verifica se ele está na mesma coluna
+function estaNaMesmaColuna(colunaPrincipal, colunaSecundaria) {
+    if (colunaPrincipal = colunaSecundaria) {
+        return true
+    }
+    return false
+}
+
+// se não estiver na mesma coluna vai verificar se é possível fazer o movimento
+function diferençaDeUm(colunaPrincipal, colunaSecundaria) {
+    let resultado = colunaPrincipal - colunaSecundaria
+    if (resultado !== -1 || resultado !== 1) {
+        return false
+    }
+    return true
 }
 
 
@@ -60,13 +78,32 @@ function organizar(matriz) {
     const size = matriz.length;
     let menor = 0 // declaração do menor valor
     menor = matriz[0][0]
+    let position = { x: 0, y: 0 }
     let contador = 0;
     for (let linha = 0; linha < size; linha++) {
         for (let coluna = 0; coluna < size; coluna++) {
             // primeiro laço, primeiro índice
             // encontrar o menor
-            if (matriz[linha][coluna] > 0) {
-                menor = matriz[linha][coluna];
+            if (menor > matriz[linha][coluna]) {
+                menor = matriz[linha][coluna]; // encontramos o menor
+                // armazenar a posição do menor elemento
+                position.x = linha
+                position.y = coluna
+                if (estaNaMesmaColuna()) {
+                    if (diferençaDeUm()) {
+                        // mover para o índice correto
+                    }
+                    else {
+                        // precisa fazer dois movimentos para chegar no local correto
+
+                    }
+                }
+                else {
+                    // não está na mesma coluna e deve mover pra mesma coluna
+                }
+                // vai ter uma função para mover até o menor
+                // precisa verificar se o menor está na mesma coluna
+                // depois de mover até o menor recomeçar
             }
         }
 
