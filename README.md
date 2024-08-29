@@ -3,11 +3,28 @@
 um problema lógico complicado de se resolver, mas é dividir para conquistar
 e é isso o que eu estou fazendo, dividindo em funções e testando até ficar correto
 
-# fotos
+# ALGORÍTMO PARA RESOLVER
+- geração de uma matriz 2d 3x3 
+- geração de um zero obrigatório na matriz
+- função encontrar o menor da vez que serve para quando for ordenar a matriz essa função vai buscar pelo menor índice
+- EXEMPLO
 
-- falta ordenar a matriz <br>
+- array aleatório inicial
 ![alt text](image.png)
 
+- movimentações 
+![alt text](image-1.png)
+![alt text](image-2.png)
+![alt text](image-3.png)
+![alt text](image-4.png)
+![alt text](image-5.png)
+![alt text](image-6.png)
+![alt text](image-7.png)
+![alt text](image-8.png)
+![alt text](image-9.png)
+![alt text](image-10.png)
+![alt text](image-11.png)
+![alt text](image-12.png)
 # minhas anotações
 
 - acho que vou ter alguns problemas como dois laços for dentro de dois laços for 
@@ -17,9 +34,7 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 - fiz alguns testes usando o canva e desenhando a matriz e movendo manualmente o índice de lugar
 - eu estava movendo para direita e para baixo verificando se era maior que esses números e quando dava true, ou seja era maior a busca se reiniciava
 - mas aconteceu um certo erro que existe uma chance de um número muito distante não conseguir verificar e impedindo a ordenação
-- como nesse exemplo
 
-![alt text](image-1.png)
 
 - aqui o 4 está antes do 3 mas seguindo esse algorítimo descrito existe uma pequena chance de não ordenar
 
@@ -29,16 +44,13 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 
 - novamente o algorítimo não resolveu o problema
 - o erro desse algorítimo foi pior que o anterior 
-- nas fotos seguintes tem o último movimento na linha e na coluna
-![alt text](image-3.png)
-![alt text](image-2.png)
+
 
 
 - percebi que esse erro é justamente porque é limitado a questão da troca
 
 - percebi que não é possível deslizar de longe mas é possível verificar percorrendo o array
-- início
-![alt text](image-4.png)
+
 
 # definindo o primeiro índice
 - vericar apartir do primeiro número e percorrer pra ver se ele é o menor
@@ -61,46 +73,21 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 - depois ir deslizando na coluna até fazer a troca do índice
 
 # resumo do algorítimo 
-- começa apartir do `array[linha0][coluna0]`
+- gerar matriz aleatório
+- gerar um zero aleatório na matriz
+- ordenar a matriz
+- VOCÊ NÃO PODE SIMPLISMENTE TROCAR UM ÍNDICE PELO O OUTRO SEM ELE ESTAR COM UM DE DIFERENÇA
+- começa apartir do `PRIMEIRO ÍNDICE`
 - use uma variável menor para percorrer o array tentando descobrir qual é o menor
-- se o `array[linha0][coluna0]` for o menor passa para o próximo
+- se o `ÌNDICE ATUAL` for o menor passa para o próximo
 - se não ache o menor percorrendo o array até o final
 - depois de achar o menor 
 - mova o menor até a mesma coluna do índice que você está usando como base
 - de ínicio é o `array[linha0][coluna0]`
 - depois deslize ele na coluna fazendo swap(trocas) até finalmente ele ser o menor
+- TODA VEZ QUE FIZER UMA TROCA IMPRIMA O ARRAY APÓS A TROCA
 - passe para o próximo item da linha
 - se não ouver outro intem na linha passe para a próxima coluna
 - se não ouver a próxima coluna o problema foi resolvido
 
-# código para reutilizar 
-if (menor >= matriz[linha + 1][coluna] && indiceExiste(matriz, linha + 1, coluna)) {
-                console.log(contador)
-                contador++
-            }
 
-
-matriz = trocarElementos(
-                        matriz, posicaoDoAtual.linha , posicaoDoAtual.coluna
-                        , posicaoDoMenor.linha , posicaoDoMenor.coluna
-                    )
-
-
-if (estaNaMesmaColuna(posicaoDoAtual.coluna,posicaoDoMenor.coluna)) {
-                    
-                    if (diferençaDeUm(posicaoDoAtual.coluna,posicaoDoMenor.coluna)) {
-                        // mover para o índice correto
-                        //trocarElementos(matriz,)
-                      
-                    }
-                    else {
-                        // precisa fazer dois movimentos para chegar no local correto
-
-                    }
-                }
-                else {
-                    // não está na mesma coluna e deve mover pra mesma coluna
-                }
-                // vai ter uma função para mover até o menor
-                // precisa verificar se o menor está na mesma coluna
-                // depois de mover até o menor recomeçar
