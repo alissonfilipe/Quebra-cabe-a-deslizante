@@ -56,6 +56,29 @@ function Mover(array, linha, coluna) {
 
 }
 
+// função para descobrir a posição do menor da vez
+function descobrirAPosicaoDoMenorDaVez(matriz){
+    let posicaoDoMenor = { linha: 0, coluna: 0 }
+    console.table(matriz)
+    let menor = matriz[0][0]
+    for (let linha = 0; linha < size; linha++) {
+        for (let coluna = 0; coluna < size; coluna++) {
+            // primeiro laço, primeiro índice
+            // encontrar o menor
+            if (menor > matriz[linha][coluna]) {
+                menor = matriz[linha][coluna]; // encontramos o menor
+                // armazenar a posição do menor elemento
+                posicaoDoMenor.linha = linha
+                posicaoDoMenor.coluna = coluna
+                
+            }
+        }
+        
+
+    }
+    return posicaoDoMenor
+}
+
 // primeiro verifica se ele está na mesma coluna
 function estaNaMesmaColuna(colunaPrincipal, colunaSecundaria) {
     if (colunaPrincipal = colunaSecundaria) {
@@ -78,34 +101,16 @@ function organizar(matriz) {
     const size = matriz.length;
     let menor = 0 // declaração do menor valor
     menor = matriz[0][0]
-    let position = { x: 0, y: 0 }
+    let posicaoDoMenor = { linha: 0, coluna: 0 }
+    let posicaoDoAtual = { linha: 0, coluna: 0 }
     let contador = 0;
     for (let linha = 0; linha < size; linha++) {
         for (let coluna = 0; coluna < size; coluna++) {
-            // primeiro laço, primeiro índice
-            // encontrar o menor
-            if (menor > matriz[linha][coluna]) {
-                menor = matriz[linha][coluna]; // encontramos o menor
-                // armazenar a posição do menor elemento
-                position.x = linha
-                position.y = coluna
-                if (estaNaMesmaColuna()) {
-                    if (diferençaDeUm()) {
-                        // mover para o índice correto
-                    }
-                    else {
-                        // precisa fazer dois movimentos para chegar no local correto
-
-                    }
-                }
-                else {
-                    // não está na mesma coluna e deve mover pra mesma coluna
-                }
-                // vai ter uma função para mover até o menor
-                // precisa verificar se o menor está na mesma coluna
-                // depois de mover até o menor recomeçar
-            }
+            posicaoDoMenor = descobrirAPosicaoDoMenorDaVez(matriz)
+            console.log("posição do menor",posicaoDoMenor)
         }
+        // aqui eu tenho que verificar se o certo é coluna ou linha
+        // o certo seria coluna mas eu posso confundi
 
 
     }

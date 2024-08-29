@@ -9,6 +9,11 @@ e é isso o que eu estou fazendo, dividindo em funções e testando até ficar c
 ![alt text](image.png)
 
 # minhas anotações
+
+- acho que vou ter alguns problemas como dois laços for dentro de dois laços for 
+- uma função para encontrar o menor indice 
+- e essa função deve ficar dentor dos laços que percorrer o array
+
 - fiz alguns testes usando o canva e desenhando a matriz e movendo manualmente o índice de lugar
 - eu estava movendo para direita e para baixo verificando se era maior que esses números e quando dava true, ou seja era maior a busca se reiniciava
 - mas aconteceu um certo erro que existe uma chance de um número muito distante não conseguir verificar e impedindo a ordenação
@@ -75,3 +80,27 @@ if (menor >= matriz[linha + 1][coluna] && indiceExiste(matriz, linha + 1, coluna
             }
 
 
+matriz = trocarElementos(
+                        matriz, posicaoDoAtual.linha , posicaoDoAtual.coluna
+                        , posicaoDoMenor.linha , posicaoDoMenor.coluna
+                    )
+
+
+if (estaNaMesmaColuna(posicaoDoAtual.coluna,posicaoDoMenor.coluna)) {
+                    
+                    if (diferençaDeUm(posicaoDoAtual.coluna,posicaoDoMenor.coluna)) {
+                        // mover para o índice correto
+                        //trocarElementos(matriz,)
+                      
+                    }
+                    else {
+                        // precisa fazer dois movimentos para chegar no local correto
+
+                    }
+                }
+                else {
+                    // não está na mesma coluna e deve mover pra mesma coluna
+                }
+                // vai ter uma função para mover até o menor
+                // precisa verificar se o menor está na mesma coluna
+                // depois de mover até o menor recomeçar
